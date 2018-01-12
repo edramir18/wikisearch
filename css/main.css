@@ -1,7 +1,27 @@
 .page-header {
-	padding: 0 2vw;
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 1vh 2vw;
 	background-color: silver;
+	display: inline-grid;
+	width: 96vw;
+	grid-template-columns: auto 20vw;
 }
 	.page-header__title {
-		
+		font-size: 1.8em;
+		font-weight: bold;
 	}
+.btn-group {
+	display: inline-flex;
+}
+.btn {
+	background-color: yellow;
+}
+.page-footer {
+	background-color: silver;	
+	bottom: 0;
+	position: fixed;
+	padding: 1vh 2vw;
+	width: 96vw;
+	height: 3vh;
+}
