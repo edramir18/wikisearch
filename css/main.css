@@ -1,7 +1,7 @@
 .page-grid {	
   display: grid;
 	grid-template-columns: 1fr;
-  grid-template-rows: 4rem 2rem 1fr 2rem;
+  grid-template-rows: 4rem 3rem 1fr 2rem;
   min-height: 100vh;
 }
 
@@ -55,4 +55,20 @@
   }
   .btn--icon:hover{
     font-size: 1.8em;
+  }
+
+.form-grid {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+.submit {
+  color: white;
+  padding: 0.1em 0.5em ;
+  border: 0;
+  border-radius: 0.2em;
+  line-height: 2em;
+  background-color: blue; 
+}
+  .submit:hover {
+    font-weight: bold;
   }
