@@ -17,7 +17,10 @@
 .page-header {
   background-color: rgba(177, 171, 160, 0.4);
   padding: 0 1rem;
-}
+} 
+  .page-header--title{
+    display: inline;
+  }
 
 .page-footer {
   line-height: 2rem;
@@ -34,10 +37,6 @@
   padding-bottom: 0.5rem;
 }
 
-.page-header--title{
-  display: inline;
-}
-
 .btn {
   display: inline-block;  
   text-decoration: none;  
@@ -47,10 +46,10 @@
   text-align: center;
   border-radius: .2em;
 }
-.btn:hover{  
-  font-size: 1.1em;
-  font-weight: bold;
-}
+  .btn:hover{  
+    font-size: 1.1em;
+    font-weight: bold;
+  }
   .btn--icon{
     font-size: 1.5em;
   }
