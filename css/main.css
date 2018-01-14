@@ -1,27 +1,59 @@
+.page-grid {	
+  display: grid;
+	grid-template-columns: 1fr;
+  grid-template-rows: 4rem 2rem 1fr 2rem;
+  min-height: 100vh;
+}
+
+
+.page-main {
+  background-color: rgba(25, 165, 90, 0.4)
+}
+
+.page-nav {
+  background-color: rgba(202, 148, 31, 0.4)
+}
+
 .page-header {
-	font-size: 12px;
-	line-height: 1.5;
-	padding: 1vh 2vw;
-	background-color: silver;
-	display: inline-grid;
-	width: 96vw;
-	grid-template-columns: auto 20vw;
+  background-color: rgba(177, 171, 160, 0.4);
+  padding: 0 1rem;
 }
-	.page-header__title {
-		font-size: 1.8em;
-		font-weight: bold;
-	}
-.btn-group {
-	display: inline-flex;
-}
-.btn {
-	background-color: yellow;
-}
+
 .page-footer {
-	background-color: silver;	
-	bottom: 0;
-	position: fixed;
-	padding: 1vh 2vw;
-	width: 96vw;
-	height: 3vh;
+  line-height: 2rem;
+  padding-left: 1rem;
 }
+
+.header-grid {
+  display: grid;
+  line-height: 3rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 50px 50px;
+  grid-gap: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-header--title{
+  display: inline;
+}
+
+.btn {
+  display: inline-block;  
+  text-decoration: none;  
+  display: inline-block;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  border-radius: .2em;
+}
+.btn:hover{  
+  font-size: 1.1em;
+  font-weight: bold;
+}
+  .btn--icon{
+    font-size: 1.5em;
+  }
+  .btn--icon:hover{
+    font-size: 1.8em;
+  }
