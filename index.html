@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Main Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Main Title</title>
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,12 +30,22 @@
       </form>
     </section>
 		<main class="page-main">
-      <p>main</p>
+      <section id="wikisection" class="wiki-section">
+      </section>
 		</main>
 		<footer class="page-footer">
 		  <small>&copy;2018 Eduardo Ramirez</small>
 		</footer>
-	</div>
+	</div>  
+
+  <template id="wikiarticle">
+    <article class="wikiarticle">
+      <header class="wikiheader">
+        <h3 class="title"></h3>
+      </header>
+      <p class="extract"></p>
+    </article>
+  </template>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
