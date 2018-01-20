@@ -61,3 +61,5 @@ typings/
 .sass-cache/
 *.css.map
 
+# idea files
+.idea/
