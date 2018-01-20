@@ -1,16 +1,16 @@
-'use strict'
+'use strict';
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
 
 gulp.task('sass', () => {
-    gulp.src('./app/scss/*.scss')
+    gulp.src('./app/scss/main.scss')
         .pipe(sass({
             outputStyle: 'expanded',
             sourceComments: false
         }))
-        .pipe(gulp.dest('./public/css'))
+        .pipe(gulp.dest('./public/css/'))
         .pipe(browserSync.stream());
 });
 

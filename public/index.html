@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Main Title</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <script defer src="vendor/fontawesome/js/fontawesome-all.js"></script>
 </head>
 <body>
-	<div class="page-grid">
-		<header class="page-header">
-      <div class="header-grid">
-        <h3 class="page-header--title">
-          Edramir18
-        </h3>
-        <a href="https://github.com/edramir18/wikisearch" class="btn btn--icon" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/edramir18" class="btn btn--icon" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-		</header>
-		<section class="form-search">
-      <form name="formwiki" action="" method="GET" onsubmit="return searchWiki();">
-        <div class="form-grid">
-          <label for="searchwiki">Search</label>
-          <input type="text" name="searchwiki" id="searchwiki" required pattern="[A-Za-z0-9\s]*" maxlength="30">
-          <input class="submit" type="submit" value="GO!">
+<div class="container">
+    <header class="header">
+        <h1 class="header__title">Wikipedia API Search</h1>
+        <div class="toolbar">
+            <a class="toolbar__btn" href="https://github.com/edramir18/wikisearch" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="toolbar__btn" href="https://twitter.com/edramir18" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-      </form>
+    </header>
+    <section>
+        <form name="formwiki" action="" method="GET" onsubmit="return searchWiki();">
+            <div>
+                <label for="searchwiki">Search</label>
+                <input type="text" name="searchwiki" id="searchwiki" required pattern="[A-Za-z0-9\s]*" maxlength="30">
+                <input type="submit" value="GO!">
+            </div>
+        </form>
     </section>
-		<main class="page-main">
-      <section id="wikisection" class="wiki-section">
-      </section>
-		</main>
-		<footer class="page-footer">
-		  <small>&copy;2018 Eduardo Ramirez</small>
-		</footer>
-	</div>  
+    <main>
 
-  <template id="wikiarticle">
-    <article class="wikiarticle">
-      <header class="wikiheader">
-        <h3 class="title"></h3>
-      </header>
-      <p class="extract"></p>
+    </main>
+    <footer>
+        <small>&copy;2018 Eduardo Ramirez</small>
+    </footer>
+</div>
+
+<template id="wikiarticle">
+    <article>
+        <header>
+            <h3></h3>
+        </header>
+        <p></p>
     </article>
-  </template>
-	<script type="text/javascript" src="js/main.js"></script>
+</template>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
