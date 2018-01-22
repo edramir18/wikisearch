@@ -1,0 +1,23 @@
+.btn {
+    color: #333333;
+    background-color: white;
+    border: 0.05em solid #333333;
+    border-radius: 0.2em;    
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;        
+
+    &__icon{        
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        height: 1.15em;
+    }
+    &:hover{
+        color: white;
+        background-color: #333333;
+    }
+}
+.btn.fa{
+    font-size: inherit;
+    line-height: 1.15;
+}

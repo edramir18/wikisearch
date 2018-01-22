@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 12px;
+  @include for-tables-portrait-up {
+    font-size: 16px;
+  }
+  @include for-tables-landscape-up {
+    font-size: 20px;
+  }
+  @include for-desktop-up {
+    font-size: 20px;
+  }
+  @include for-big-desktop-up {
+    font-size: 24px;
+  }
+}
