@@ -7,16 +7,15 @@
     display: inline-block;
     transition-property: background-color;
     transition-duration: 0.4s;
-
+    height: 1.85em;
     &__icon{        
         padding: 0.1em 0.3em;
-        height: 1.45em;
+        
         width: 1.6em;
         text-align: center;
     }
     &__text{
         padding: 0.1em 0.3em;
-        height: 1.45em;
         text-align: center;
     }
     &:hover{
@@ -26,5 +25,26 @@
 }
 .btn.fa{
     font-size: inherit;
-    line-height: 1.15;
+    line-height: 1.5;
+}
+
+.article{
+    margin-top: 1em;
+    &__header{
+        padding-bottom: .1em;
+        border-bottom: .1em solid #000;
+        margin-bottom: 0.3em;
+    }
+    &__title{        
+        display: inline-block;
+        margin: 0;
+    }
+    &__link{
+        text-decoration: none;
+    }
+    &__text{
+        //overflow: hidden;
+        margin-top: 0.3em;
+        //max-height: 4.5em;       
+    }
 }

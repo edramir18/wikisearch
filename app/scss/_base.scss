@@ -4,6 +4,7 @@
 
 html{
   font-size: 12px;
+  line-height: 1.5;
   @include for-tables-portrait-up {
     font-size: 16px;
   }

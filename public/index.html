@@ -21,15 +21,15 @@
     <section>
         <form id="form" name="f-search" class="search" method="post">
             <label for="search">Search</label>            
-            <input type="text" name="search" id="searchtext">
+            <input type="text" name="search" id="searchtext" required pattern="^[A-Za-z0-9]([\w]+[\s]?)*">
             <button class="btn btn__icon" type="submit"><i class="fa fa-search"></i></button>
             <button class="btn btn__icon" type="reset"><i class="fa fa-remove"></i></button>        
             <button class="btn btn__text" type="button" name="random">Random</button>
         </form>
         
     </section>
-    <main>
-        <p>Lorem</p>       
+    <main id="wikisection" class="main">
+        
     </main>
     <footer class="footer">
         <small>&copy;2018 Eduardo Ramirez</small>
@@ -37,11 +37,13 @@
 </div>
 
 <template id="wikiarticle">
-    <article>
-        <header>
-            <h3></h3>
+    <article class="article">
+        <header class="article__header">            
+            <h3 class="article__title">                
+            </h3>
+            <a href="#" class="article__link" target="_blank"><i class="fa fa-external-link"></i></a>
         </header>
-        <p></p>
+        <p class="article__text"></p>
     </article>
 </template>
 <script type="text/javascript" src="js/main.js"></script>

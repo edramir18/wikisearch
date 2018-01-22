@@ -4,6 +4,7 @@
 
 html {
   font-size: 12px;
+  line-height: 1.5;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 899px) {
@@ -78,6 +79,18 @@ html {
   align-items: center;
 }
 
+.main {
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .4s;
+}
+
+.main.-isvisible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .btn {
   color: #333333;
   background-color: white;
@@ -87,18 +100,17 @@ html {
   display: inline-block;
   transition-property: background-color;
   transition-duration: 0.4s;
+  height: 1.85em;
 }
 
 .btn__icon {
   padding: 0.1em 0.3em;
-  height: 1.45em;
   width: 1.6em;
   text-align: center;
 }
 
 .btn__text {
   padding: 0.1em 0.3em;
-  height: 1.45em;
   text-align: center;
 }
 
@@ -109,5 +121,28 @@ html {
 
 .btn.fa {
   font-size: inherit;
-  line-height: 1.15;
+  line-height: 1.5;
+}
+
+.article {
+  margin-top: 1em;
+}
+
+.article__header {
+  padding-bottom: .1em;
+  border-bottom: .1em solid #000;
+  margin-bottom: 0.3em;
+}
+
+.article__title {
+  display: inline-block;
+  margin: 0;
+}
+
+.article__link {
+  text-decoration: none;
+}
+
+.article__text {
+  margin-top: 0.3em;
 }

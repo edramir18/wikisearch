@@ -1,14 +1,15 @@
-function loadJsonOnTemplate(template, pages) {
-    const article = document.getElementById(template.name);
-    const section = document.getElementById(template.target); 
+function loadJSONOnArticle(name, target, pages) {
+    const article = document.getElementById(name);
+    const section = document.getElementById(target); 
     
     if(!article || !section) return;
     
     Object.keys(pages).forEach((k, i) => {
-        const cloneArticle = article.content.cloneNode(true);
-        template.properties.forEach((p) => {
-            cloneArticle.querySelector("." + p).textContent = pages[k][p];
-        });
+        const cloneArticle = article.content.cloneNode(true);        
+        cloneArticle.querySelector("h3").textContent = pages[k]["title"];
+        cloneArticle.querySelector("p").textContent = pages[k]["extract"];
+        cloneArticle.querySelector("a")["href"] = pages[k]["fullurl"];
+        
         if(section.children.length > i){
             section.replaceChild(cloneArticle, section.children[i]);
         } else {
@@ -18,13 +19,13 @@ function loadJsonOnTemplate(template, pages) {
 
 }
 
-function searchWiki(){
-    const searchInput = document.forms["formwiki"]["searchwiki"];
-    searchInput.value = "";
-    searchInput.blur();
-
-    const searchURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&exsentences=3&origin=*";
-
+function searchWiki(text){
+    let searchURL;
+    if (!text){
+        searchURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&exsentences=3&origin=*";
+    }else {
+        searchURL = "";
+    }
     const myHeaders = new Headers();
     const myInit = { method: 'GET',
                headers: myHeaders,
@@ -38,32 +39,28 @@ function searchWiki(){
             return response.json();
         })
         .then(json => {
-            loadJsonOnTemplate({
-                name: "wikiarticle",
-                target: "wikisection",
-                properties: ["title", "extract"]
-            }, json.query.pages);
+            loadJSONOnArticle("wikiarticle", "wikisection", json.query.pages);
+            document.getElementById("wikisection").classList.add("-isvisible");
         })
         .catch(error => {
             console.log('There has been a problem with your fetch operation: ', error.message);
         });
-
+    document.getElementById("wikisection").classList.remove("-isvisible");
     return false;
 }
 
-function submitHandler (event) {
-    console.log(this);
-    console.log(event);
+function submitHandler (event) {    
+    const form = event.target;
     event.preventDefault();
 }
 
 function resetHandler (event) {
-    console.log("reset function");
+    const main = document.getElementById("wikisection");
+    main.textContent = "";
 }
 
 function randomHandler (event) {
-    event.cancelBubble = true;
-    console.log(event);
+    searchWiki();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,5 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener("reset", resetHandler);
     form.querySelector('button[name="random"]').addEventListener("click", randomHandler);
 
-
+    const main = document.getElementById("wikisearch");    
 }, false);

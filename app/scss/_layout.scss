@@ -44,5 +44,16 @@
     grid-template-columns: 4em 12em repeat(2, 1.6em) 6em;
     grid-template-rows: auto;
     grid-gap: .2em;
-    align-items: center;
+    align-items: center;    
+}
+
+.main {
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .4s;
+    &.-isvisible {
+        opacity: 1;
+        visibility: visible;
+    }
 }

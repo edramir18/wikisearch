@@ -9,7 +9,7 @@ To be able to query the wikipedia is necesary to include the parameter *origin=\
 
 *Random Query*
 ```
-https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true
+https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&origin=*
 ```
 
 Remenber to use *type=button* inside button on forms to prevent the default value of _submit_
@@ -18,6 +18,7 @@ Remenber to use *type=button* inside button on forms to prevent the default valu
 - [How to iterate over properties](http://2ality.com/2011/04/iterating-over-arrays-and-objects-in.html)
 - [How to use HTML Templates](https://www.w3schools.com/tags/tag_template.asp)
 - [Get element by Id](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+- [Pattern to check input fields](http://html5pattern.com/)
 
 ### BrowserSync
 The npm package **BrowerSync** will be used to livereload and automatic refresh of the project's files. More information about the installation and configuration can be found on the following link [BrowserSync](https://browsersync.io/)
