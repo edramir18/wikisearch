@@ -16,15 +16,19 @@ function loadJSONOnArticle(name, target, pages) {
             section.appendChild(cloneArticle);
         }
     });
-
 }
 
 function searchWiki(text){
     let searchURL;
     if (!text){
-        searchURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&exsentences=3&origin=*";
+        searchURL = "https://en.wikipedia.org/w/api.php?format=json&action=query"
+            +"&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url"
+            +"&exintro=true&explaintext=true&exsentences=3&origin=*";
     }else {
-        searchURL = "";
+        searchURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&action=query"
+            +"&generator=search&gsrnamespace=0&gsrlimit=10&prop=info|extracts&inprop=url"
+            +"&exintro=true&explaintext=true&exsentences=3&origin=*&gsrsearch="
+            + text.replace(/\s/g, "+");        
     }
     const myHeaders = new Headers();
     const myInit = { method: 'GET',
@@ -50,7 +54,8 @@ function searchWiki(text){
 }
 
 function submitHandler (event) {    
-    const form = event.target;
+    const form = event.target;    
+    searchWiki(form.search.value)
     event.preventDefault();
 }
 

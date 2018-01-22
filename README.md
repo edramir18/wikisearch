@@ -12,6 +12,11 @@ To be able to query the wikipedia is necesary to include the parameter *origin=\
 https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&grnlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&origin=*
 ```
 
+*Text query*
+```
+https://en.wikipedia.org/w/api.php?format=json&action=query&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=info|extracts&inprop=url&exintro=true&explaintext=true&exsentences=3&origin=*&gsrsearch=simon+bolivar
+```
+
 Remenber to use *type=button* inside button on forms to prevent the default value of _submit_
 
 ### Useful Links
@@ -22,6 +27,3 @@ Remenber to use *type=button* inside button on forms to prevent the default valu
 
 ### BrowserSync
 The npm package **BrowerSync** will be used to livereload and automatic refresh of the project's files. More information about the installation and configuration can be found on the following link [BrowserSync](https://browsersync.io/)
-```
-br
-```
