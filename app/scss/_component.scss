@@ -5,12 +5,19 @@
     border-radius: 0.2em;    
     text-decoration: none;
     display: inline-block;
-    transition-duration: 0.4s;        
+    transition-property: background-color;
+    transition-duration: 0.4s;
 
     &__icon{        
-        padding-left: 0.3em;
-        padding-right: 0.3em;
-        height: 1.15em;
+        padding: 0.1em 0.3em;
+        height: 1.45em;
+        width: 1.6em;
+        text-align: center;
+    }
+    &__text{
+        padding: 0.1em 0.3em;
+        height: 1.45em;
+        text-align: center;
     }
     &:hover{
         color: white;

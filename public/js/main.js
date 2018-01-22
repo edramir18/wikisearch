@@ -50,6 +50,28 @@ function searchWiki(){
 
     return false;
 }
+
+function submitHandler (event) {
+    console.log(this);
+    console.log(event);
+    event.preventDefault();
+}
+
+function resetHandler (event) {
+    console.log("reset function");
+}
+
+function randomHandler (event) {
+    event.cancelBubble = true;
+    console.log(event);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM Loaded");
+    const form = document.getElementById("form");
+    form.addEventListener("submit", submitHandler);
+    form.addEventListener("reset", resetHandler);
+    form.querySelector('button[name="random"]').addEventListener("click", randomHandler);
+
+
 }, false);

@@ -40,18 +40,9 @@
 }
 
 .search {
-    width: 100%;
-    //height: auto;    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 4em 12em repeat(2, 1.6em) 6em;
+    grid-template-rows: auto;
+    grid-gap: .2em;
     align-items: center;
-    justify-content: space-between;
-    &__item {
-        margin: 0 .5em;
-    }
-    &__item:nth-child(1){
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
 }

@@ -19,18 +19,12 @@
         </div>
     </header>
     <section>
-        <form class="search">
-            <div class="search__item">
-                <label for="search">Search</label>
-                <input type="text" name="search" id="wikitext">
-            </div>
-            <div class="search__item">
-                <input type="submit" value="GO">
-                <input type="reset" value="Reset">
-            </div>
-            <div class="search__item">
-                <button>Random</button>
-            </div>
+        <form id="form" name="f-search" class="search" method="post">
+            <label for="search">Search</label>            
+            <input type="text" name="search" id="searchtext">
+            <button class="btn btn__icon" type="submit"><i class="fa fa-search"></i></button>
+            <button class="btn btn__icon" type="reset"><i class="fa fa-remove"></i></button>        
+            <button class="btn btn__text" type="button" name="random">Random</button>
         </form>
         
     </section>
